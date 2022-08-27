@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content{
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+#content.inactive{
+    background-color: white;
+}
+#snack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    font-family: 'Poppins',sans-serif;
+    padding: 10px 20px;
+    color: white;
+    background-color: #0070ff;
+    transition: .5s;
+}
+#snack.inactive{
+    bottom: -50px;
+    transition: .5s;
+}
+#card{
+    font-family: 'Poppins',sans-serif;
+    width: 400px;
+    height: 250px;
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    transition: .5s;
+}
+#card.inactive{
+    opacity: 0.5;
+    background-color: black;
+}
+#card #head{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#card #head #title-head{
+    font-weight: 600;
+    color: black;
+}
+#card #head #title-head.inactive{
+    color: white;
+}
+#card #head #title-head span{
+    font-weight: 500;
+    color: #0070ff;
+}
+#card #address.inactive{
+    transition: .5s;
+    background-color: #cccccc;
+    border-radius: 1px;
+}
+#card #address{
+    transition: .5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    width: 100%;
+    font-size: .8rem;
+    color: black;
+    transition: .5s;
+    cursor: pointer;
+    /* user-select: none; */
+}
+#card #address:hover{
+    color: #0070ff;
+    font-size: .9rem;
+    transition: .5s;
+    
+}
+#footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#footer.inactive{
+    color: white;
+}
+#footer #title-footer{
+    font-weight: 600;
+}
+#icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#icon svg{
+    width: 25px;
+    height: 25px;
+}
+#footer.inactive #icon svg{
+    fill: white;
+}
+
+@media(max-width:480px) {
+    #card{
+        transform: rotateZ(90deg);
+    }
+}
